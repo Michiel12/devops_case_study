@@ -1,6 +1,6 @@
 version: "3.9"
 services:
- randomizer-service:
+ case-study:
   image: mikkevl/case_study_6_michiel_van_loy
   deploy:
     replicas: 10
