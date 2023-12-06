@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Build the Docker image
-      working-directory: case_study_6_michiel_van_loy_github/devops_case_study
+      working-directory: devops_case_study
       run: docker build . -t mikkevl/case_study_6_michiel_van_loy:latest
 
     - name: Log into Docker Hub
