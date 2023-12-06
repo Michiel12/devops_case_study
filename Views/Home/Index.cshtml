@@ -1,0 +1,41 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<Race>
+
+@{
+    ViewData["Title"] = "Races";
+}
+
+<h1 style="text-align: center;">Races</h1>
+
+@foreach (var race in Model) {
+    <div style="display: flex; border: 1px solid #ccc; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+        <div style="flex: 1;">
+            <p style="margin: 10px 0;"><b>Name:</b> @race.name</p>
+            @if (race.street == null) {
+                <p style="margin: 10px 0;"><b>Address:</b> @race.postalCode @race.city </p>
+            }
+            else {
+                <p style="margin: 10px 0;"><b>Address:</b> @race.street @race.houseNumber </p>
+                <p style="margin: 10px 0; padding-left: 70px;"> @race.postalCode @race.city </p>
+            }
+            <p style="margin: 10px 0;"><b>Country:</b> @race.country 
+                @if (race.countryFlag != null)
+                {
+                    <img src="@race.countryFlag.File.Url" alt="@race.countryFlag.Title" height="30" style="border: 1px solid #ccc;" />
+                }
+            </p>
+            <p style="margin: 10px 0;"><b>Length:</b> @race.length km</p>
+        </div>
+        <div style="flex: end;">
+            @if (race.layout != null)
+            {
+                <p style="margin: 10px 0;"><img src="@race.layout.File.Url" alt="@race.layout.Title" height="165"/></p>
+            }
+            else
+            {
+                <i>No layout available</i>
+            }
+        </div>     
+    </div>
+}
