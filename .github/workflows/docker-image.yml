@@ -45,4 +45,4 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:latest, ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:${{ github.run_number }}
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:21
+        run: docker push docker.io/${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:latest
