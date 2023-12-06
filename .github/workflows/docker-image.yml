@@ -35,9 +35,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Push the image to Docker Hub
-        run: docker push mikkevl/case_study_6_michiel_van_loy
-
       - name: Build
         id: docker_build
         uses: docker/build-push-action@v2
