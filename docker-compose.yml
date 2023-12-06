@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+ randomizer-service:
+  image: mikkevl/case_study_6_michiel_van_loy
+  deploy:
+    replicas: 10
+    restart_policy:
+      condition: on-failure
+  ports:
+    - "80:80"
