@@ -39,34 +39,4 @@ jobs:
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:latest .
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:latest
-
-      - name: Build
-        uses: okteto/actions/build@v1
-        with:
-          token: ${{ secrets.OKTETO_TOKEN }}
-          tag: ${{ secrets.DOCKER_USERNAME }}/case_study_6_michiel_van_loy:${{ github.sha }}
-
-      - name: Get Kubeconfig
-        uses: okteto/actions/devops_case_study@v1
-        id: namespace
-        with:
-          token: ${{ secrets.OKTETO_TOKEN }}
-          namespace: devops_case_study
-
-      - name: Deploy and Wait
-        uses: okteto/actions/deploy@v1
-        env:
-          KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
-        with:
-          namespace: devops_case_study
-          manifest: k8s.yml
-          tag: ${{ secrets.DOCKER_USERNAME }}/case_study_6_michiel_van_loy:${{ github.sha }}
-          waitOn: deployment/case_study_6_michiel_van_loy
-
-      - name: Verify
-        uses: srt32/uptime@master
-        with:
-          url-to-hit: "https://case_study_6_michiel_van_loy-devops_case_study.cloud.okteto.net"
-          expected-statuses: "200"
-  
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:latest 
