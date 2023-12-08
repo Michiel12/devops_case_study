@@ -19,5 +19,4 @@ RUN dotnet publish "case_study_6_michiel_van_loy.csproj" -c Release -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY ["Views/Home", "Views/Home"]
 ENTRYPOINT ["dotnet", "case_study_6_michiel_van_loy.dll"]
