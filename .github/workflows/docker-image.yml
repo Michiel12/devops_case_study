@@ -1,0 +1,42 @@
+name: CI-build-and-push-image-for-dotnetapp
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - .vscode/**
+      - .gitignore
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - .vscode/**
+      - .gitignore
+      
+  workflow_dispatch:
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log into Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        
+      - name: Docker Build
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:latest .
+
+      - name: Upload container to Docker Hub with Push
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/case_study_6_michiel_van_loy:latest 
