@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KlA/VFgKKav2gUvWRyVuaQDyp5hDLAVmSLrhAWXjZprVBRl7gykljeJbdphvuckNfQIfAzuH2k/qSZItGWyYHg==",
+  "dgSpecHash": "2wBEr46hqt4bnijKRMf77MUOgkw/VZRQsaFzPpiSYDptFxulGXIyjZkRfp4fLfZ2CkA/e81ZcDijLYIQ9jTBqA==",
   "success": true,
-  "projectFilePath": "C:\\case_study_6_michiel_van_loy\\case_study_6_michiel_van_loy.csproj",
+  "projectFilePath": "C:\\case_study_6_michiel_van_loy_github\\devops_case_study\\case_study_6_michiel_van_loy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\michi\\.nuget\\packages\\contentful.aspnetcore\\7.4.3\\contentful.aspnetcore.7.4.3.nupkg.sha512",
     "C:\\Users\\michi\\.nuget\\packages\\contentful.csharp\\7.4.3\\contentful.csharp.7.4.3.nupkg.sha512",

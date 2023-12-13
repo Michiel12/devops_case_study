@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\case_study_6_michiel_van_loy\\case_study_6_michiel_van_loy.csproj": {}
+    "C:\\case_study_6_michiel_van_loy_github\\devops_case_study\\case_study_6_michiel_van_loy.csproj": {}
   },
   "projects": {
-    "C:\\case_study_6_michiel_van_loy\\case_study_6_michiel_van_loy.csproj": {
+    "C:\\case_study_6_michiel_van_loy_github\\devops_case_study\\case_study_6_michiel_van_loy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\case_study_6_michiel_van_loy\\case_study_6_michiel_van_loy.csproj",
+        "projectUniqueName": "C:\\case_study_6_michiel_van_loy_github\\devops_case_study\\case_study_6_michiel_van_loy.csproj",
         "projectName": "case_study_6_michiel_van_loy",
-        "projectPath": "C:\\case_study_6_michiel_van_loy\\case_study_6_michiel_van_loy.csproj",
+        "projectPath": "C:\\case_study_6_michiel_van_loy_github\\devops_case_study\\case_study_6_michiel_van_loy.csproj",
         "packagesPath": "C:\\Users\\michi\\.nuget\\packages\\",
-        "outputPath": "C:\\case_study_6_michiel_van_loy\\obj\\",
+        "outputPath": "C:\\case_study_6_michiel_van_loy_github\\devops_case_study\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
